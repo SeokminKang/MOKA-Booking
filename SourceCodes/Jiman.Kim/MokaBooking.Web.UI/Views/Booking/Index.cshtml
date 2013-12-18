@@ -1,0 +1,23 @@
+﻿@{
+    //** Booking/Index
+
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<div class="availabilitytable" ng-app="availabilityApp">
+    <table class="table" ng-controller="availabilityController">
+        <thead>
+            <tr>
+                <th>Date/Time</th>
+                <th>Availability</th>
+            </tr>
+        </thead>
+
+        <tbody ng-repeat="bookingState in bookingStates">
+            <tr class="booking-{{bookingState.booked}}">
+                <td>{{bookingState.bookingDate}}</td>
+                <td>{{bookingState.booked}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

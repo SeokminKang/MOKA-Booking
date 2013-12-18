@@ -126,6 +126,7 @@
     </Compile>
     <Compile Include="App_Start\BootstrapBundleConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -437,6 +438,7 @@
     <Content Include="Scripts\angularjs\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\angularjs\i18n\angular-locale_zu.js" />
     <Content Include="Responses\bookings.json" />
+    <Content Include="Responses\availability.json" />
     <None Include="Scripts\jquery\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\controllers.js" />
     <Content Include="Scripts\jquery\jquery-2.0.3.js" />
@@ -460,6 +462,7 @@
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Booking\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,4 +1,5 @@
-﻿.form-group input {
+﻿
+.form-group input {
     margin: 5px auto;
     width: 30%;
 }
@@ -18,6 +19,10 @@
     width: 40%;
 }
 
+.navbar.navbar-default{
+    height: 80px;
+}
+
 .navbar-logo, .navbar-text{
     float: left;
 }
@@ -34,12 +39,18 @@
     margin-bottom: 2px;
 }
 
+.navbar-text a {
+    color: #808080;
+    text-decoration: none;
+}
+
+
+
 .footer{
     border-top: 1px solid #808080;
     height:50px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: 20px;
+    
 }
 
 .footer p{
@@ -47,7 +58,16 @@
     margin-right: 5px;
 }
 
-.bookingtable table{
+.bookingtable table, .availabilitytable table{
     width: 50%;
     margin: 0 auto;
 }
+
+.booking-true{
+    background-color: #f2b4a0;
+}
+
+.booking-false{
+    background-color: #afe9a8;
+}
+
