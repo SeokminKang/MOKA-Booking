@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Booking";
+}
+<h2>@Html.Raw(ViewBag.Title)</h2>
+
+<table class="table table-hover" ng-controller="bookingController">
+    <thead>
+      <tr class="active">
+        <td>Date/Time</td>
+        <td>Availabilty</td>
+      </tr>
+    </thead>
+    <tbody ng-repeat="availability in availability">
+        if(ViewBag.Booked){
+            <tr class="success">
+                <td>{{availability.bookingDate}}</td>
+                <td>booked</td>
+            </tr>
+        }else{
+            <tr class="danger">
+                <td>{{availability.bookingDate}}</td>
+                <td>available</td>
+            </tr>
+        }   
+         
+    </tbody>
+  
+
+</table>
