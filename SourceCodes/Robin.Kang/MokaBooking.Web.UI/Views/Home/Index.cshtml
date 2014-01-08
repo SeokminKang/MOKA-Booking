@@ -1,27 +1,25 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
-
-<h2>@Html.Raw(ViewBag.Title)</h2>
-
-<table class="table table-hover" ng-controller="bookingController">
-    <thead>
-      <tr class="active">
-        <td>Name</td>
-        <td>Email</td>
-        <td>Date</td>
-        <td>Guests</td>
-      </tr>
-    </thead>
-    <tbody ng-repeat="book in bookings">
-      <tr class="success">
-        <td>{{book.givenName}} {{book.surnmae}}</td>
-        <td>{{book.email}}</td>
-        <td>{{book.bookingDate}}</td>
-        <td>{{book.numberOfGuests}}</td>
-       </tr>
-    </tbody>
-  
-
-</table>
-
+<div class="row clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <table class="table table-hover" ng-controller="bookingController">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Date/Time</th>
+                    <th>Guests</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="booking in bookings">
+                <tr>
+                    <td>{{booking.givenName}} {{booking.surname}}</td>
+                    <td>{{booking.email}}</td>
+                    <td>{{booking.bookingDate}}</td>
+                    <td>{{booking.numberOfGuests}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

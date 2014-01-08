@@ -48,6 +48,18 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="SimpleMockWebService.Configurations">
+      <HintPath>..\..\..\Libraries\SimpleMockWebService.Web.API\SimpleMockWebService.Configurations.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleMockWebService.IoC">
+      <HintPath>..\..\..\Libraries\SimpleMockWebService.Web.API\SimpleMockWebService.IoC.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleMockWebService.Services">
+      <HintPath>..\..\..\Libraries\SimpleMockWebService.Web.API\SimpleMockWebService.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleMockWebService.Web.API">
+      <HintPath>..\..\..\Libraries\SimpleMockWebService.Web.API\SimpleMockWebService.Web.API.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -126,7 +138,7 @@
     </Compile>
     <Compile Include="App_Start\BootstrapBundleConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -437,8 +449,8 @@
     <Content Include="Scripts\angularjs\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\angularjs\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\angularjs\i18n\angular-locale_zu.js" />
-    <Content Include="Responses\bookings.json" />
-    <Content Include="Responses\availability.json" />
+    <Content Include="Responses\get.bookings.json" />
+    <Content Include="Responses\get.availabilities.json" />
     <None Include="Scripts\jquery\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\controllers.js" />
     <Content Include="Scripts\jquery\jquery-2.0.3.js" />
@@ -446,7 +458,9 @@
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\plugins.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -462,7 +476,8 @@
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Booking.cshtml" />
+    <Content Include="Views\Booking\Index.cshtml" />
+    <Content Include="SimpleMockWebService.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
