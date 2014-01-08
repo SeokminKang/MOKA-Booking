@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Availability";
+}
+
+<div class="row clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h2>@Html.Raw(ViewBag.Title)</h2>
+    </div>
+</div>
+
+<div class="row clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <table class="table table-hover" ng-controller="availabilityController">
+            <thead>
+                <tr>
+                    <th>Date/Time</th>
+                    <th>Availability</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="availability in availabilities">
+                <tr class="{{availability.booked | getBookedCssClass : 'danger' : 'success'}}">
+                    <td>{{availability.bookingDate}}</td>
+                    <td>{{availability.booked | getBookedMessage : 'booked' : 'available' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
